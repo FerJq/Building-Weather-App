@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css">
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+          <h1>New York</h1>
+            <div class="row">
+              <div class="specif-one col-4">
+                  <ul >
+                    <li>Weather</li>
+                    <li id="time">Wednesday 10:00PM</li>
+                    <li id="weather-type">Clear with periodic clouds</li>
+                  </ul>
+                  </div>
+                  <div class="col-4">
+                      <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt=""/>
+                      <span><p class="temperature">°</p><span class="units"><a id="celcius-temp" href="">C</a> | <a id="farenheit-temp" href="">F</a></span></span>
+                  </div>
+                  <div class="specif-two col-4">
+                  <ul>
+                    <li id="prec">Precipitation: 1%</li>
+                    <li id="hum">Humidity: 55%</li>
+                    <li id="wind">Wind: 9mph</li>
+                  </ul>
+                  </div>
+                  <form id="search-form">
+                    <span class="form-space">
+                      <input class="bt btn btn-primary" type="submit" value="Search"/>
+                      <input class="bar" id="location-value" type="search" placeholder="Type a city..." autofocus />
+                    </span>
+                  </form>
+                  <span>
+                  <button class="btn btn-danger" id="actualPosition" onClick="location.reload()">Current</button>
+                  <button class="btn btn-success" id="coords">Know you Coords!👈</button>
+                  </span>
+                  </span>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

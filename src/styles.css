@@ -1,0 +1,80 @@
+h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 2%;
+}
+ul {
+  list-style: none;
+}
+
+img {
+  width: 80px;
+}
+
+form {
+  padding: 2%;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.specif-one {
+  padding: 0;
+}
+
+.specif-two {
+  padding: 0;
+}
+
+.temperature {
+  font-size: 50px;
+  float: left;
+}
+.units {
+  color: blue;
+  font-size: 20px;
+  float: right;
+}
+.weather-app {
+  background: rgb(254, 243, 255);
+  border: 2px solid rgb(179, 0, 255);
+  max-width: 700px;
+  padding: 15px;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+.bt {
+  padding: 1%;
+  width: 100px;
+}
+
+.bar {
+  width: 300px;
+  padding: 0.7%;
+  border-radius: 5px;
+}
+
+.form-space {
+  padding: 10%;
+}
+
+#actualPosition {
+  margin-left: 78px;
+  width: 100px;
+  padding: 0;
+  margin-top: -12px;
+}
+
+#coords {
+  margin-left: 5px;
+  width: 200px;
+  padding: 0;
+  margin-top: -12px;
+}
