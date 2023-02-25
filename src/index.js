@@ -16,6 +16,12 @@ function spec(response) {
   let wind = document.querySelector("#wind");
   let air = `Wind: ${response.data.wind.speed}mph`;
   wind.innerHTML = `${air}`;
+
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 /// function to alert a null input and update the city.
 function search_value() {
