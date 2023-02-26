@@ -11,47 +11,65 @@
       crossorigin="anonymous"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
   <body>
+    <!--StartContainer-->
     <div class="container">
-      <div class="weather-app">
-          <h1>New York</h1>
-            <div class="row">
-              <div class="specif-one col-4">
-                  <ul >
-                    <li>Weather</li>
-                    <li id="time">Wednesday 10:00PM</li>
-                    <li id="weather-type">Clear with periodic clouds</li>
-                  </ul>
-                  </div>
-                  <div class="col-4">
-                      <img id="icon" src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt=""/>
-                      <span><p class="temperature">°</p><span class="units"><a id="celcius-temp" href="">C</a> | <a id="farenheit-temp" href="">F</a></span></span>
-                  </div>
-                  <div class="specif-two col-4">
-                  <ul>
-                    <li id="prec">Precipitation: 1%</li>
-                    <li id="hum">Humidity: 55%</li>
-                    <li id="wind">Wind: 9mph</li>
-                  </ul>
-                  </div>
-                  <form id="search-form">
-                    <span class="form-space">
-                      <input class="bt btn btn-primary" type="submit" value="Search"/>
-                      <input class="bar" id="location-value" type="search" placeholder="Type a city..." autofocus />
-                    </span>
-                  </form>
-                  <span>
-                  <button class="btn btn-danger" id="actualPosition" onClick="location.reload()">Current</button>
-                  <button class="btn btn-success" id="coords">Know you Coords!👈</button>
-                  </span>
-                  </span>
-                </div>
-              </div>
+      <!--Weather Container-->
+      <div class="weather-app row">
+        <!--Search form-->
+        <form id="search-form">
+          <span class="form-space">
+            <input class="bt btn btn-primary" type="submit" value="Search" />
+            <input
+              class="bar"
+              id="location-value"
+              type="search"
+              placeholder="Type a city..."
+              autofocus
+            />
+          </span>
+        </form>
+        <h1>New York</h1>
+        <!--Units section-->
+        <span class="units"
+          ><a id="celcius-temp" href="">C°</a> |
+          <a id="farenheit-temp" href="">F°</a></span
+        >
+        <!--Specifications List Div-->
+        <div class="gridd">
+          <div>
+            <ul>
+              <li>Weather</li>
+              <li id="time">Wednesday 10:00PM</li>
+              <li id="weather-type">Clear with periodic clouds</li>
+              <br />
+              <li id="prec">Precipitation: 1%</li>
+              <li id="hum">Humidity: 55%</li>
+              <li id="wind">Wind: 9mph</li>
+            </ul>
           </div>
+          <!--New Section Gridd-->
+          <div>
+            <p class="temperature"></p>
+          </div>
+        </div>
+        <!--Button container-->
+        <div class="button-container">
+          <button
+            class="btn btn-danger"
+            id="actualPosition"
+            onClick="location.reload()"
+          >
+            Current
+          </button>
+          <button class="btn btn-success" id="coords">Coords👈</button>
+        </div>
+        <!--End Weather app Div-->
       </div>
+      <!--End container Div-->
     </div>
     <script src="src/index.js"></script>
   </body>
