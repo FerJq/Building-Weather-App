@@ -2,8 +2,8 @@
 function spec(response) {
   //description
   let description = document.querySelector("#weather-type");
-  let type = `${response.data.weather[0].description}`.toUpperCase();
-  description.innerHTML = `${type}`;
+  let type = `${response.data.weather[0].description}`;
+  description.innerHTML = `Weather: ${type}`;
 
   let precipitation = document.querySelector("#prec");
   let clouds = `Precip: ${response.data.clouds.all}%`;
@@ -22,7 +22,12 @@ function spec(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  let tempMax = document.querySelector("#feels-like");
+  let max_temp = `${Math.round(response.data.main.temp_max)}`;
+  tempMax.innerHTML = `Max temp: ${max_temp}°`;
 }
+
 /// function to alert a null input and update the city.
 function search_value() {
   let search_input = document.querySelector("#location-value");
@@ -48,7 +53,7 @@ function search(event) {
     function displayTemp(response) {
       let temp = Math.round(response.data.main.temp);
       let actual_temperature = document.querySelector("p");
-      actual_temperature.innerHTML = `${temp}`;
+      actual_temperature.innerHTML = `${temp}°`;
       spec(response);
     }
     // functions to update the temperature according of user choice
@@ -60,7 +65,7 @@ function search(event) {
         console.log(response.data.main.temp);
         let temp = Math.round(response.data.main.temp);
         let temp_met = document.querySelector("p");
-        temp_met.innerHTML = `${temp}`;
+        temp_met.innerHTML = `${temp}°`;
       });
     });
     //farenheit
@@ -72,7 +77,7 @@ function search(event) {
         console.log(response.data.main.temp);
         let temp = Math.round(response.data.main.temp);
         let temp_imp = document.querySelector("p");
-        temp_imp.innerHTML = `${temp}`;
+        temp_imp.innerHTML = `${temp}°`;
       });
     });
   } else {
@@ -81,7 +86,7 @@ function search(event) {
     function displayTemp(response) {
       let temp = Math.round(response.data.main.temp);
       let actual_temperature = document.querySelector("p");
-      actual_temperature.innerHTML = `${temp}`;
+      actual_temperature.innerHTML = `${temp}°`;
       spec(response);
     }
   }
@@ -94,7 +99,7 @@ function search(event) {
       console.log(response.data.main.temp);
       let temp = Math.round(response.data.main.temp);
       let temp_met = document.querySelector("p");
-      temp_met.innerHTML = `${temp}`;
+      temp_met.innerHTML = `${temp}°`;
     });
   });
   // functions to update the temperature according of user choice
@@ -107,7 +112,7 @@ function search(event) {
       console.log(response.data.main.temp);
       let temp = Math.round(response.data.main.temp);
       let temp_imp = document.querySelector("p");
-      temp_imp.innerHTML = `${temp}`;
+      temp_imp.innerHTML = `${temp}°`;
     });
   });
   // calling the AXIOS function
@@ -129,7 +134,7 @@ if (search_value === "") {
   function displayTemp(response) {
     let temp = Math.round(response.data.main.temp);
     let actual_temperature = document.querySelector("p");
-    actual_temperature.innerHTML = `${temp}`;
+    actual_temperature.innerHTML = `${temp}°`;
     spec(response);
   }
 } else {
@@ -137,7 +142,7 @@ if (search_value === "") {
   function displayTemp(response) {
     let temp = Math.round(response.data.main.temp);
     let actual_temperature = document.querySelector("p");
-    actual_temperature.innerHTML = `${temp}`;
+    actual_temperature.innerHTML = `${temp}°`;
     spec(response);
   }
 }
@@ -152,7 +157,7 @@ celcius_temp.addEventListener("click", function (event) {
     console.log(response.data.main.temp);
     let temp = Math.round(response.data.main.temp);
     let temp_met = document.querySelector("p");
-    temp_met.innerHTML = `${temp}`;
+    temp_met.innerHTML = `${temp}°`;
   });
 });
 
@@ -163,7 +168,7 @@ faren_temp.addEventListener("click", function (event) {
     console.log(response.data.main.temp);
     let temp = Math.round(response.data.main.temp);
     let temp_imp = document.querySelector("p");
-    temp_imp.innerHTML = `${temp}`;
+    temp_imp.innerHTML = `${temp}°`;
   });
 });
 

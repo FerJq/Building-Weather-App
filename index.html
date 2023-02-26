@@ -40,21 +40,30 @@
         >
         <!--Specifications List Div-->
         <div class="gridd">
-          <div>
-            <ul>
-              <li>Weather</li>
-              <li id="time">Wednesday 10:00PM</li>
-              <li id="weather-type">Clear with periodic clouds</li>
-              <br />
-              <li id="prec">Precipitation: 1%</li>
-              <li id="hum">Humidity: 55%</li>
-              <li id="wind">Wind: 9mph</li>
-            </ul>
-          </div>
-          <!--New Section Gridd-->
-          <div>
+          <!--New Degrees Section-->
+          <div class="degrees-section">
             <p class="temperature"></p>
           </div>
+          <!--Weather Icon section-->
+          <div class="icon-container">
+            <img
+              id="icon"
+              src="http://openweathermap.org/img/wn/01d@2x.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="weather-description">
+          <span>
+            <div id="time">Wednesday 10:00PM</div>
+            <div id="weather-type">Clear with periodic clouds</div>
+            <div id="feels-like"></div>
+          </span>
+          <span>
+            <div id="prec">Precipitation: 1%</div>
+            <div id="hum">Humidity: 55%</div>
+            <div id="wind">Wind: 9mph</div>
+          </span>
         </div>
         <!--Button container-->
         <div class="button-container">

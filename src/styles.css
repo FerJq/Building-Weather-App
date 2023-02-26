@@ -5,11 +5,18 @@ h1 {
   left: 80px;
 }
 ul {
+  border: 1px solid black;
   list-style: none;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 form {
-  padding: 2%;
+  padding: 3%;
+}
+
+img {
+  width: 120px;
 }
 
 a {
@@ -25,6 +32,7 @@ a:hover {
 .temperature {
   font-size: 120px;
   text-align: center;
+  position: relative;
 }
 .units {
   color: blue;
@@ -71,5 +79,33 @@ a:hover {
 .gridd {
   padding: 4%;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 200px 50px 2px;
+}
+
+.button-container {
+  text-align: center;
+  position: relative;
+  right: 40px;
+}
+
+.degrees-section {
+  margin-top: -18px;
+  width: 400px;
+  max-width: 700px;
+  position: relative;
+  left: 150px;
+}
+
+.icon-container {
+  position: relative;
+  right: 20px;
+}
+
+.weather-description {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  position: relative;
+  bottom: 50px;
+  left: 150px;
 }
