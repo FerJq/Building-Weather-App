@@ -1,19 +1,24 @@
 /* Weather App Container */
 .weather-app {
+  color: white;
   text-align: center;
   display: block;
-  border: 1px solid black;
+  border: 2px solid rgb(182, 223, 255);
   margin: 20px auto;
   max-width: 700px;
   border-radius: 20px;
+  background: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
 }
 /* Search Form */
 .search-bar {
+  box-shadow: 3px 3px grey;
   width: 400px;
   max-width: 500px;
 }
 
 .search-bt {
+  transition: all 200ms ease-in-out;
+  box-shadow: 3px 3px grey;
   width: 100px;
 }
 
@@ -28,18 +33,22 @@
 }
 
 #celcius-temp {
+  color: white;
   text-decoration: none;
 }
 
 #farenheit-temp {
+  color: white;
   text-decoration: none;
 }
 
 #celcius-temp:hover {
+  transition: all 200ms ease-in-out;
   text-decoration: underline;
 }
 
 #farenheit-temp:hover {
+  transition: all 200ms ease-in-out;
   text-decoration: underline;
 }
 /*Grid Container, Icon and Temperature */
@@ -62,5 +71,51 @@
   margin-left: 20px;
   width: 150px;
 }
-h1 {
+
+/* Description*/
+.weather-description-container {
+  display: block;
+  margin: 0 auto;
+  width: 350px;
+  padding: 3%;
+}
+.weather-description {
+  display: grid;
+  grid-template-columns: 150px 150px;
+}
+
+/*Bottom buttons section*/
+.button-container {
+  padding: 3%;
+}
+
+#actualPosition {
+  box-shadow: 3px 3px grey;
+  width: 150px;
+  padding: 5px;
+}
+
+#actualPosition:hover {
+    po
+  background-color: gainsboro;
+}
+
+#coords:hover {
+  background-color: gainsboro;
+}
+#coords {
+  box-shadow: 3px 3px grey;
+  width: 150px;
+  padding: 5px;
+}
+
+/*Source code by: F.S*/
+.by {
+  display: block;
+  margin: 0 auto;
+  padding: 2%;
+}
+
+.source {
+  text-decoration: none;
 }

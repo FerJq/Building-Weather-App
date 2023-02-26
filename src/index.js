@@ -22,10 +22,6 @@ function spec(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-
-  let tempMax = document.querySelector("#feels-like");
-  let max_temp = `${Math.round(response.data.main.temp_max)}`;
-  tempMax.innerHTML = `Max temp: ${max_temp}°`;
 }
 
 /// function to alert a null input and update the city.
