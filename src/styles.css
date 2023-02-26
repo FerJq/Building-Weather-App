@@ -1,0 +1,61 @@
+/* Weather App Container */
+.weather-app {
+  text-align: center;
+  display: block;
+  border: 1px solid black;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 20px;
+}
+/* Search Form */
+.search-bar {
+  width: 400px;
+  max-width: 500px;
+}
+
+.search-bt {
+  width: 100px;
+}
+
+#search-form {
+  padding: 4%;
+}
+
+/* Units = Celcius or Farenheit section*/
+.units {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#celcius-temp {
+  text-decoration: none;
+}
+
+#farenheit-temp {
+  text-decoration: none;
+}
+
+#celcius-temp:hover {
+  text-decoration: underline;
+}
+
+#farenheit-temp:hover {
+  text-decoration: underline;
+}
+/*Grid Container, Icon and Temperature */
+
+.gridd {
+  display: grid;
+  grid-template-columns: 2fr 1px 50px 2fr 2fr;
+}
+
+.temperature {
+  font-size: 100px;
+}
+
+#icon {
+  margin-left: 20px;
+  width: 150px;
+}
+h1 {
+}

@@ -22,13 +22,12 @@
         <!--Search form-->
         <form id="search-form">
           <span class="form-space">
-            <input class="bt" type="submit" value="Search" />
+            <input class="search-bt" type="submit" value="Search" />
             <input
-              class="bar"
+              class="search-bar"
               id="location-value"
               type="search"
               placeholder="Type a city..."
-              autofocus
             />
           </span>
         </form>
@@ -40,10 +39,6 @@
         >
         <!--Specifications List Div-->
         <div class="gridd">
-          <!--New Degrees Section-->
-          <div class="degrees-section">
-            <p class="temperature"></p>
-          </div>
           <!--Weather Icon section-->
           <div class="icon-container">
             <img
@@ -51,6 +46,10 @@
               src="http://openweathermap.org/img/wn/01d@2x.png"
               alt=""
             />
+          </div>
+          <!--New Degrees Section-->
+          <div class="degrees-section">
+            <p class="temperature"></p>
           </div>
         </div>
         <div class="weather-description">
@@ -77,7 +76,10 @@
       <!--End container Div-->
     </div>
     <span class="By">
-      <a href="">Open source code</a> By Fernanda Santiago
+      <a href="https://github.com/FerJq/Building-Weather-App"
+        >Open source code</a
+      >
+      By Fernanda Santiago
     </span>
     <script src="src/index.js"></script>
   </body>
