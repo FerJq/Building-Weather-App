@@ -3,7 +3,8 @@ function spec(response) {
   //description
   let description = document.querySelector("#weather-type");
   let type = `${response.data.weather[0].description}`;
-  description.innerHTML = `Weather: ${type}`;
+  let climate = type.charAt(0).toUpperCase() + type.slice(1);
+  description.innerHTML = `Weather: ${climate}`;
 
   let precipitation = document.querySelector("#prec");
   let clouds = `Precip: ${response.data.clouds.all}%`;
@@ -28,7 +29,9 @@ function spec(response) {
 function search_value() {
   let search_input = document.querySelector("#location-value");
   let heading = document.querySelector("h1");
-  let search_value = `${search_input.value}`;
+  let value = `${search_input.value}`;
+  let search_value = value.charAt(0).toUpperCase() + value.slice(1);
+
   console.log(search_value);
   if (search_value === "") {
     alert("Type something");
