@@ -197,3 +197,33 @@ function getCurrentPosition() {
 
 let coords = document.querySelector("#coords");
 coords.addEventListener("click", getCurrentPosition);
+/////////Night Mode//////////////
+function darkMode() {
+  alert(
+    "The Day or Night preview will be visualized, once Current button is pressed, it will return as default time!"
+  );
+  let theme_bt = document.querySelector("#modeContainer");
+
+  if (theme_bt.classList.contains("weather-app")) {
+    theme_bt.classList.remove("weather-app");
+    theme_bt.classList.add("darkmode");
+  } else {
+    theme_bt.classList.remove("darkmode");
+    theme_bt.classList.add("weather-app");
+  }
+}
+
+let night_button = document.querySelector("#mode_bt");
+night_button.addEventListener("click", darkMode);
+////MODE TIME PREVIEW ACCORDING THE TIME////
+let theme_bt = document.querySelector("#modeContainer");
+let hour_mode = new Date();
+let night_hour = hour_mode.getHours();
+if (night_hour >= 18 || night_hour <= 6) {
+  theme_bt.classList.contains("weather-app");
+  theme_bt.classList.remove("weather-app");
+  theme_bt.classList.add("darkmode");
+} else {
+  theme_bt.classList.remove("darkmode");
+  theme_bt.classList.add("weather-app");
+}

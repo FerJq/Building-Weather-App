@@ -18,7 +18,7 @@
     <!--StartContainer-->
     <div class="container">
       <!--Weather Container-->
-      <div class="weather-app row">
+      <div id="modeContainer" class="weather-app">
         <!--Search form-->
         <form id="search-form">
           <span class="form-space">
@@ -72,8 +72,10 @@
           <button class="" id="actualPosition" onClick="location.reload()">
             Current
           </button>
-          <button class="" id="coords">Coords👈</button>
+          <button class="" id="coords">Coor👈</button>
         </div>
+        <button id="mode_bt">Mode</button>
+        <!--Night/day Mode-->
         <!--Source code by: F.S-->
         <span class="by">
           <a class="source" href="https://github.com/FerJq/Building-Weather-App"

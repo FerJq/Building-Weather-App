@@ -1,5 +1,6 @@
 /* Weather App Container */
 .weather-app {
+  transition: all 200ms ease-in-out;
   color: black;
   text-align: center;
   display: block;
@@ -123,7 +124,19 @@
   background-color: gainsboro;
   box-shadow: 3px 3px rgb(255, 255, 255);
 }
+/*Button Mode*/
+#mode_bt {
+  transition: all 200ms ease-in-out;
+  box-shadow: 3px 3px grey;
+  width: 100px;
+}
 
+#mode_bt:hover {
+  transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  background-color: gainsboro;
+  box-shadow: 3px 3px rgb(255, 255, 255);
+}
 /*Source code by: F.S*/
 .by {
   display: block;
@@ -140,5 +153,51 @@
   transition: all 200ms ease-in-out;
   text-decoration: underline;
   border: 1px solid black;
+  border-radius: 30px;
+}
+
+/* Night Theme*/
+
+.darkmode {
+  transition: all 100ms ease-in-out;
+  text-align: center;
+  display: block;
+  border: 2px solid rgba(81, 83, 255, 0.459);
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 20px;
+  color: white;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/221/original/2202_w026_n002_1449b_p1_1449.jpg?1677440870");
+}
+
+.darkmode #celcius-temp {
+  color: white;
+}
+
+.darkmode #farenheit-temp {
+  transition: all 200ms ease-in-out;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.darkmode #celcius-temp:hover {
+  transition: all 200ms ease-in-out;
+  text-decoration: underline;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 30px;
+}
+
+.darkmode #farenheit-temp:hover {
+  transition: all 200ms ease-in-out;
+  text-decoration: underline;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 30px;
+}
+
+.darkmode .source:hover {
+  color: white;
+  transition: all 200ms ease-in-out;
+  text-decoration: underline;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 30px;
 }
