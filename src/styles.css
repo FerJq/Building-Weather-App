@@ -1,13 +1,13 @@
 /* Weather App Container */
 .weather-app {
-  color: white;
+  color: black;
   text-align: center;
   display: block;
-  border: 2px solid rgb(182, 223, 255);
+  border: 2px solid rgba(255, 205, 242, 0.459);
   margin: 20px auto;
   max-width: 700px;
   border-radius: 20px;
-  background: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/218/original/9294.jpg?1677438991");
 }
 /* Search Form */
 .search-bar {
@@ -30,26 +30,35 @@
 .units {
   font-weight: 600;
   font-size: 20px;
+  padding: 1%;
 }
 
 #celcius-temp {
-  color: white;
+  transition: all 200ms ease-in-out;
+  padding: 1%;
+  color: gray;
   text-decoration: none;
 }
 
 #farenheit-temp {
-  color: white;
+  transition: all 200ms ease-in-out;
+  padding: 1%;
+  color: gray;
   text-decoration: none;
 }
 
 #celcius-temp:hover {
   transition: all 200ms ease-in-out;
   text-decoration: underline;
+  border: 1px solid black;
+  border-radius: 30px;
 }
 
 #farenheit-temp:hover {
   transition: all 200ms ease-in-out;
   text-decoration: underline;
+  border: 1px solid black;
+  border-radius: 30px;
 }
 /*Grid Container, Icon and Temperature */
 
@@ -69,7 +78,7 @@
 
 #icon {
   margin-left: 20px;
-  width: 150px;
+  width: 140px;
 }
 
 /* Description*/
@@ -90,22 +99,29 @@
 }
 
 #actualPosition {
+  transition: all 200ms ease-in-out;
   box-shadow: 3px 3px grey;
   width: 150px;
   padding: 5px;
 }
 
 #actualPosition:hover {
+  transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   background-color: gainsboro;
+  box-shadow: 3px 3px rgb(255, 255, 255);
 }
 
-#coords:hover {
-  background-color: gainsboro;
-}
 #coords {
   box-shadow: 3px 3px grey;
   width: 150px;
   padding: 5px;
+}
+
+#coords:hover {
+  transition: all 200ms ease-in-out;
+  background-color: gainsboro;
+  box-shadow: 3px 3px rgb(255, 255, 255);
 }
 
 /*Source code by: F.S*/
@@ -116,5 +132,13 @@
 }
 
 .source {
+  padding: 1%;
   text-decoration: none;
+}
+
+.source:hover {
+  transition: all 200ms ease-in-out;
+  text-decoration: underline;
+  border: 1px solid black;
+  border-radius: 30px;
 }
