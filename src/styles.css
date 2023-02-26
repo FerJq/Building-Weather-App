@@ -44,9 +44,14 @@
 }
 /*Grid Container, Icon and Temperature */
 
+.grid-container {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+}
 .gridd {
   display: grid;
-  grid-template-columns: 2fr 1px 50px 2fr 2fr;
+  grid-template-columns: 150px 150px;
 }
 
 .temperature {
