@@ -39,6 +39,13 @@ function search_value() {
     return (heading.innerHTML = `${search_value}`);
   }
 }
+
+function displayTemp(response) {
+  let temp = Math.round(response.data.main.temp);
+  let actual_temperature = document.querySelector("p");
+  actual_temperature.innerHTML = `${temp}°`;
+  spec(response);
+}
 //// function to switch for the current temperatures and data
 function search(event) {
   event.preventDefault();
@@ -48,36 +55,19 @@ function search(event) {
   if (search_input === true) {
     city = document.querySelector("h1").innerHTML = `${search_input}`;
     metricTemp = `https://api.openweathermap.org/data/2.5/weather?q=${city.innerHTML}&appid=${apiKey}&units=${metricUnits}`;
-    //function to get the data from the Axios/API
-    function displayTemp(response) {
-      let temp = Math.round(response.data.main.temp);
-      let actual_temperature = document.querySelector("p");
-      actual_temperature.innerHTML = `${temp}°`;
-      spec(response);
-    }
     // functions to update the temperature according of user choice
     //celcius
     let celcius_temp = document.querySelector("#celcius-temp");
     celcius_temp.addEventListener("click", function (event) {
       event.preventDefault();
-      axios.get(metricTemp).then(function (response) {
-        console.log(response.data.main.temp);
-        let temp = Math.round(response.data.main.temp);
-        let temp_met = document.querySelector("p");
-        temp_met.innerHTML = `${temp}°`;
-      });
+      axios.get(metricTemp).then(displayTemp);
     });
     //farenheit
     let faren_temp = document.querySelector("#farenheit-temp");
     faren_temp.addEventListener("click", function (event) {
       let imperialTemp = `https://api.openweathermap.org/data/2.5/weather?q=${city.innerHTML}&appid=${apiKey}&units=${imperialUnits}`;
       event.preventDefault();
-      axios.get(imperialTemp).then(function (response) {
-        console.log(response.data.main.temp);
-        let temp = Math.round(response.data.main.temp);
-        let temp_imp = document.querySelector("p");
-        temp_imp.innerHTML = `${temp}°`;
-      });
+      axios.get(imperialTemp).then(displayTemp);
     });
   } else {
     //function to keep the default data.
@@ -94,12 +84,7 @@ function search(event) {
   let celcius_temp = document.querySelector("#celcius-temp");
   celcius_temp.addEventListener("click", function (event) {
     event.preventDefault();
-    axios.get(metricTemp).then(function (response) {
-      console.log(response.data.main.temp);
-      let temp = Math.round(response.data.main.temp);
-      let temp_met = document.querySelector("p");
-      temp_met.innerHTML = `${temp}°`;
-    });
+    axios.get(metricTemp).then(displayTemp);
   });
   // functions to update the temperature according of user choice
   //farenheit
@@ -107,12 +92,7 @@ function search(event) {
   faren_temp.addEventListener("click", function (event) {
     let imperialTemp = `https://api.openweathermap.org/data/2.5/weather?q=${city.innerHTML}&appid=${apiKey}&units=${imperialUnits}`;
     event.preventDefault();
-    axios.get(imperialTemp).then(function (response) {
-      console.log(response.data.main.temp);
-      let temp = Math.round(response.data.main.temp);
-      let temp_imp = document.querySelector("p");
-      temp_imp.innerHTML = `${temp}°`;
-    });
+    axios.get(imperialTemp).then(displayTemp);
   });
   // calling the AXIOS function
   axios.get(metricTemp).then(displayTemp);
@@ -128,7 +108,7 @@ let imperialUnits = "imperial";
 let metricTemp = `https://api.openweathermap.org/data/2.5/weather?q=${city.innerHTML}&appid=${apiKey}&units=${metricUnits}`;
 let imperialTemp = `https://api.openweathermap.org/data/2.5/weather?q=${city.innerHTML}&appid=${apiKey}&units=${imperialUnits}`;
 
-//////CURRENT TEMPERATURE//////////////////
+//////CURRENT TEMPERATURE///////////
 if (search_value === "") {
   function displayTemp(response) {
     let temp = Math.round(response.data.main.temp);
@@ -152,23 +132,13 @@ axios.get(metricTemp).then(displayTemp);
 let celcius_temp = document.querySelector("#celcius-temp");
 celcius_temp.addEventListener("click", function (event) {
   event.preventDefault();
-  axios.get(metricTemp).then(function (response) {
-    console.log(response.data.main.temp);
-    let temp = Math.round(response.data.main.temp);
-    let temp_met = document.querySelector("p");
-    temp_met.innerHTML = `${temp}°`;
-  });
+  axios.get(metricTemp).then(displayTemp);
 });
 
 let faren_temp = document.querySelector("#farenheit-temp");
 faren_temp.addEventListener("click", function (event) {
   event.preventDefault();
-  axios.get(imperialTemp).then(function (response) {
-    console.log(response.data.main.temp);
-    let temp = Math.round(response.data.main.temp);
-    let temp_imp = document.querySelector("p");
-    temp_imp.innerHTML = `${temp}°`;
-  });
+  axios.get(imperialTemp).then(displayTemp);
 });
 
 /// DISPLAY CURRENT HOUR AND DAY
