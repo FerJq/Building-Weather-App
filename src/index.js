@@ -97,6 +97,31 @@ function search(event) {
   // calling the AXIOS function
   axios.get(metricTemp).then(displayTemp);
 }
+
+///Show Forecast Temperature
+function showForecast() {
+  let forecastItem = document.querySelector("#forecast-container");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML += `
+            <div class="col-2">
+              <div class="weather-day">${day}</div>
+              <img
+                src="http://openweathermap.org/img/wn/11d@2x.png"
+                alt=""
+                width="36"
+              />
+              <div class="degrees-date-forecast">
+                <span class="max-temperature-day">18°</span>
+                <span class="min-temperature-day">12°</span>
+              </div>
+            </div>`;
+  });
+  forecastHTML += `</div>`;
+  forecastItem.innerHTML = forecastHTML;
+}
+
 //API DATA
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
@@ -200,3 +225,6 @@ if (night_hour >= 18 || night_hour <= 6) {
   theme_bt.classList.remove("darkmode");
   theme_bt.classList.add("weather-app");
 }
+
+////Forecast Weather///////////
+showForecast();
