@@ -4,11 +4,11 @@
   color: black;
   text-align: center;
   display: block;
-  border: 2px solid rgba(255, 205, 242, 0.459);
+  border: 3px solid rgb(253, 210, 160);
   margin: 20px auto;
   max-width: 700px;
   border-radius: 20px;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/218/original/9294.jpg?1677438991");
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/267/original/test.jpg?1677476201");
 }
 /* Search Form */
 .search-bar {
@@ -162,7 +162,7 @@
   transition: all 100ms ease-in-out;
   text-align: center;
   display: block;
-  border: 2px solid rgba(108, 137, 255, 0.459);
+  border: 3px solid rgba(191, 204, 255, 0.459);
   margin: 20px auto;
   max-width: 700px;
   border-radius: 20px;
