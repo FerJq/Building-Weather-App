@@ -25,6 +25,30 @@ function spec(response) {
   );
 }
 
+///Show Forecast Temperature
+function showForecast() {
+  let forecastItem = document.querySelector("#forecast-container");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML += `
+            <div class="col-2">
+              <div class="weather-day">${day}</div>
+              <img
+                src="http://openweathermap.org/img/wn/11d@2x.png"
+                alt=""
+                width="36"
+              />
+              <div class="degrees-date-forecast">
+                <span class="max-temperature-day">18°</span>
+                <span class="min-temperature-day">12°</span>
+              </div>
+            </div>`;
+  });
+  forecastHTML += `</div>`;
+  forecastItem.innerHTML = forecastHTML;
+}
+
 /// function to alert a null input and update the city.
 function search_value() {
   let search_input = document.querySelector("#location-value");
@@ -200,3 +224,6 @@ if (night_hour >= 18 || night_hour <= 6) {
   theme_bt.classList.remove("darkmode");
   theme_bt.classList.add("weather-app");
 }
+
+////Forecast Weather///////////
+showForecast();
