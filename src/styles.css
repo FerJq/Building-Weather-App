@@ -178,7 +178,10 @@
 .min-temperature-day {
   opacity: 0.6;
 }
-
+/*Active temperature*/
+.active {
+  color: rgb(0, 102, 255);
+}
 /* Night Theme*/
 
 .darkmode {
@@ -227,4 +230,8 @@
 
 .darkmode .forecast-class {
   color: white;
+}
+
+.darkmode .active {
+  color: gold;
 }
