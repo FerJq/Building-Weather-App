@@ -4,11 +4,11 @@
   color: black;
   text-align: center;
   display: block;
-  border: 3px solid rgb(253, 210, 160);
+  border: 3px solid rgb(35, 229, 255);
   margin: 20px auto;
   max-width: 550px;
   border-radius: 20px;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/267/original/test.jpg?1677476201");
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/507/original/wp6827241-deer-forest-hd-wallpapers.jpg?1677648873");
   padding: 2%;
 }
 /* Search Form */
@@ -36,28 +36,28 @@
   color: gray;
 }
 
-#celcius-temp {
+.celcius-temp {
   text-decoration: none;
   transition: all 200ms ease-in-out;
   padding: 1%;
   color: black;
 }
 
-#farenheit-temp {
+.farenheit-temp {
   text-decoration: none;
   transition: all 200ms ease-in-out;
   padding: 1%;
   color: black;
 }
 
-#celcius-temp:hover {
+.celcius-temp:hover {
   transition: all 200ms ease-in-out;
   text-decoration: underline;
   border: 1px solid black;
   border-radius: 30px;
 }
 
-#farenheit-temp:hover {
+.farenheit-temp:hover {
   transition: all 200ms ease-in-out;
   text-decoration: underline;
   border: 1px solid black;
@@ -148,6 +148,7 @@
 }
 
 .source {
+  color: yellow;
   padding: 1%;
   text-decoration: none;
 }
@@ -170,6 +171,8 @@
 }
 
 .col-2 {
+  padding: 5%;
+  box-shadow: 3px 3px 3px;
   transition: all 200ms ease-in-out;
   font-weight: 600;
   border: 0.5px solid rgb(0, 0, 0);
@@ -180,6 +183,7 @@
   color: rgb(0, 0, 0);
   transition: all 200ms ease-in-out;
   filter: drop-shadow(20px);
+  scale: 150%;
 }
 
 .weather-day {
@@ -198,7 +202,7 @@
 }
 /*Active temperature*/
 .active {
-  color: rgb(0, 102, 255);
+  color: blue;
 }
 /* Night Theme*/
 
@@ -211,28 +215,28 @@
   max-width: 550px;
   border-radius: 20px;
   color: white;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/221/original/2202_w026_n002_1449b_p1_1449.jpg?1677440870");
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/510/original/3ac90ec3cf959348a7da6e3a0d7a2525.jpg?1677649785");
   padding: 2%;
 }
 
-.darkmode #celcius-temp {
+.darkmode .celcius-temp {
   color: white;
 }
 
-.darkmode #farenheit-temp {
+.darkmode .farenheit-temp {
   transition: all 200ms ease-in-out;
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
-.darkmode #celcius-temp:hover {
+.darkmode .celcius-temp:hover {
   transition: all 200ms ease-in-out;
   text-decoration: underline;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 30px;
 }
 
-.darkmode #farenheit-temp:hover {
+.darkmode .farenheit-temp:hover {
   transition: all 200ms ease-in-out;
   text-decoration: underline;
   border: 1px solid rgb(255, 255, 255);
@@ -255,6 +259,7 @@
 }
 
 .darkmode .col-2 {
+  padding: 5%;
   transition: all 200ms ease-in-out;
   font-weight: 600;
   border: 0.5px solid white;

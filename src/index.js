@@ -95,12 +95,16 @@ function getCoord(coordinates) {
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   let celcius_temp = document.querySelector("#celcius-temp");
   celcius_temp.addEventListener("click", function (event) {
+    faren_temp.classList.remove("active");
+    celcius_temp.classList.add("active");
     event.preventDefault();
     apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
     axios.get(apiURL).then(showForecast);
   });
   let faren_temp = document.querySelector("#farenheit-temp");
   faren_temp.addEventListener("click", function (event) {
+    faren_temp.classList.add("active");
+    celcius_temp.classList.remove("active");
     event.preventDefault();
     apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
     axios.get(apiURL).then(showForecast);
@@ -120,6 +124,8 @@ function showTemp_showSpec(response) {
   //Celsius
   let celcius_temp = document.querySelector("#celcius-temp");
   celcius_temp.addEventListener("click", function (event) {
+    faren_temp.classList.remove("active");
+    celcius_temp.classList.add("active");
     event.preventDefault();
     let temp_met = document.querySelector("p");
     temp_met.innerHTML = `${temperature_unit}°`;
@@ -127,6 +133,8 @@ function showTemp_showSpec(response) {
 
   let faren_temp = document.querySelector("#farenheit-temp");
   faren_temp.addEventListener("click", function (event) {
+    faren_temp.classList.add("active");
+    celcius_temp.classList.remove("active");
     event.preventDefault();
     temp = (temperature_unit * 9) / 5 + 32;
     let temp_faren = document.querySelector("p");
