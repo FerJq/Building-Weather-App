@@ -16,10 +16,10 @@ function darkMode() {
 
 function currentCity(response) {
   console.log(response.data);
-  let city = document.querySelector("h1")
-  city.innerHTML = response.data.name
+  let city = document.querySelector("h1");
+  city.innerHTML = response.data.name;
 }
-currentCity
+currentCity;
 //// KNOW YOU COORDS BUTTON
 
 function getCurrentPosition() {
@@ -76,7 +76,7 @@ function showForecast(response) {
                   forecastDay.weather[0].icon
                 }@2x.png"
                 alt=""
-                width="36"
+                width="50"
               />
               <div class="degrees-date-forecast">
                 <span class="max-temperature-day">${max}°</span>

@@ -6,14 +6,15 @@
   display: block;
   border: 3px solid rgb(253, 210, 160);
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 550px;
   border-radius: 20px;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/267/original/test.jpg?1677476201");
+  padding: 2%;
 }
 /* Search Form */
 .search-bar {
   box-shadow: 3px 3px grey;
-  width: 400px;
+  width: 250px;
   max-width: 500px;
 }
 
@@ -32,20 +33,21 @@
   font-weight: 600;
   font-size: 20px;
   padding: 1%;
+  color: gray;
 }
 
 #celcius-temp {
+  text-decoration: none;
   transition: all 200ms ease-in-out;
   padding: 1%;
-  color: gray;
-  text-decoration: none;
+  color: black;
 }
 
 #farenheit-temp {
+  text-decoration: none;
   transition: all 200ms ease-in-out;
   padding: 1%;
-  color: gray;
-  text-decoration: none;
+  color: black;
 }
 
 #celcius-temp:hover {
@@ -84,6 +86,7 @@
 
 /* Description*/
 .weather-description-container {
+  font-weight: 600;
   display: block;
   margin: 0 auto;
   width: 350px;
@@ -150,6 +153,7 @@
 }
 
 .source:hover {
+  color: white;
   transition: all 200ms ease-in-out;
   text-decoration: underline;
   border: 1px solid black;
@@ -162,10 +166,24 @@
   margin-top: 20px;
   text-align: center;
   color: black;
+  padding: 5%;
+}
+
+.col-2 {
+  transition: all 200ms ease-in-out;
+  font-weight: 600;
+  border: 0.5px solid rgb(0, 0, 0);
+  border-radius: 50px;
+}
+
+.col-2:hover {
+  color: rgb(0, 0, 0);
+  transition: all 200ms ease-in-out;
+  filter: drop-shadow(20px);
 }
 
 .weather-day {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .degrees-date-forecast {
@@ -190,10 +208,11 @@
   display: block;
   border: 3px solid rgba(191, 204, 255, 0.459);
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 550px;
   border-radius: 20px;
   color: white;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/221/original/2202_w026_n002_1449b_p1_1449.jpg?1677440870");
+  padding: 2%;
 }
 
 .darkmode #celcius-temp {
@@ -219,7 +238,9 @@
   border: 1px solid rgb(255, 255, 255);
   border-radius: 30px;
 }
-
+.darkmode .source {
+  color: darkseagreen;
+}
 .darkmode .source:hover {
   color: white;
   transition: all 200ms ease-in-out;
@@ -230,6 +251,20 @@
 
 .darkmode .forecast-class {
   color: white;
+  padding: 5%;
+}
+
+.darkmode .col-2 {
+  transition: all 200ms ease-in-out;
+  font-weight: 600;
+  border: 0.5px solid white;
+  border-radius: 50px;
+}
+
+.darkmode .col-2:hover {
+  color: white;
+  transition: all 200ms ease-in-out;
+  filter: drop-shadow(20px);
 }
 
 .darkmode .active {
